@@ -24,6 +24,21 @@ for (let link of links) {
 but.addEventListener("click", back);
 ham.addEventListener("click", show);
 
+const moreElements = document.querySelectorAll(".more");
+
+for (let more of moreElements) {
+   more.addEventListener('click', createShowTabFunction);
+}
+
+function createShowTabFunction(event) {
+   const clickedMore = event.currentTarget; // The clicked "more" element
+   const parentBox = clickedMore.parentElement; // The parent box-cells element
+   const hidSibling = parentBox.nextElementSibling; // The corresponding "hid" element
+   
+   clickedMore.classList.toggle('active'); // Toggle 'active' class on the clicked "more" element
+   hidSibling.classList.toggle('show'); // Toggle 'show' class on the corresponding "hid" element
+}
+
 function handleIntersection(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -40,7 +55,7 @@ const downObserver = new IntersectionObserver(handleIntersection, {
   threshold: 0.2 // Adjust the threshold as needed
 });
 
-const downElements = document.querySelectorAll("#down, #left, #right");
+const downElements = document.querySelectorAll("#down, #left, #right, .box-cells");
 downElements.forEach(section => {
   downObserver.observe(section);
 });
