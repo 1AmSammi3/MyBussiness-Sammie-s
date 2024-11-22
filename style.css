@@ -73,6 +73,7 @@ bdy{
    flex-direction: column;
    gap: 20px;
    align-items: flex-start;
+   overflow: visible;
 }
 .container.hero h1{
    color: #180018ba;
