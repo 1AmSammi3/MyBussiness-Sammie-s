@@ -143,6 +143,9 @@ img{
    animation: back .5s 1 ease;
    animation-fill-mode: forwards;
 }
+.imageLink{
+   overflow: visible;
+}
 @keyframes back{
    from{
       transform: translateX(0px);
@@ -310,7 +313,6 @@ hr{
    display: flex;
    gap: 20px;
    flex: 1;
-   overflow: visible;
 }
 .container.faq{
    display: flex;
