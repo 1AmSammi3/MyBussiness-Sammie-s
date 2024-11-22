@@ -333,6 +333,7 @@ hr{
    gap: 0px;
    width: 80vw;
    justify-content: center;
+   overflow: visible;
 }
 .box-cells{
    display: flex;
@@ -347,9 +348,9 @@ hr{
 .more{
    font-size: 25px;
    transition: all .2s;
-   padding-inline: 5px;
    color: #510000;
    cursor: pointer;
+   overflow: visible ;
 }
 .more.active{
    transform: rotate(45deg);
@@ -393,6 +394,9 @@ hr{
 }
 
 @media only screen and (min-width: 768px){
+   *{
+      overflow-x: visible;
+   }
   .alter{
       display: flex;
       gap: 20px;
