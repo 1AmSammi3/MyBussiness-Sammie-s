@@ -310,6 +310,7 @@ hr{
    display: flex;
    gap: 20px;
    flex: 1;
+   overflow: visible;
 }
 .container.faq{
    display: flex;
@@ -320,6 +321,7 @@ hr{
    align-items: center;
    text-align: justify;
    width: 70vw;
+   overflow: visible;
 }
 .container.faq h1{
    color: #510000;
