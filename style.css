@@ -5,14 +5,14 @@
    box-sizing: border-box;
    list-style: none;
    font-family: 'Poppins', Arial, sans-serif;
+   overflow-x: hidden;
 }
-body{
+bdy{
    display: flex;
    flex-direction: column;
    width: 100vw;
    left: 0;
    justify-content: center;
-   overflow-x: hidden;
 }
 .container{
    margin: 0px auto;
@@ -33,10 +33,11 @@ body{
    align-items: flex-start;
    padding: 20px 20px 80px 40px;
    color: #000000ba;
-   margin: 0;
+   margin: 0 0 150px 0;
    border: solid 1px rgba(46, 0, 42, 0.774);
    border-radius: 0 0 60px 60px;
    box-shadow: 0 30px 100px rgba(65, 0, 38, 0.171);
+   z-index: 2;
 }
 
 .container.contact{
@@ -80,12 +81,13 @@ body{
    height: 500px;
    width: 100vw;
    display: flex;
+   margin-top: -150px;
    flex-direction: column;
    padding: 20px;
    justify-content: center;
    align-items: center;
    text-align: center;
-   gap: 40px;
+   gap: 0px;
 }
 .container.offer{
    height: 900px;
@@ -97,6 +99,7 @@ body{
    justify-content: center;
    align-items: center;
    gap: 40px;
+   overflow-x: visible;
 }
 .hero img{
    width: 300px;
@@ -177,9 +180,8 @@ a{
    background: transparent;
 }
 .navbar{
-   position: fixed;
+   position: fixed !important;
    top: 0;
-   left: 0;
    width: 100vw;
    background: white;
    display: flex;
@@ -251,6 +253,7 @@ a{
 .grid{
    display: grid;
    grid-template-columns: 1fr;
+   padding-top: 40px;
    gap: 20px;
 }
 .work{
@@ -262,10 +265,16 @@ a{
    box-shadow: 0 15px 25px #4800653f;
    border-radius: 20px;
    justify-content: space-around;
-   display: block;
-   margin-inline: auto;
+   margin-inline: 90px;
+   margin-top: -40px;
+   margin-bottom: 40px;
    align-items: center;
    justify-self: center;
+   z-index: 1;
+}
+.hype h1 {
+   margin-bottom: 50px;
+   z-index: -1;
 }
 .work :first-child{
    flex: 1;
@@ -336,6 +345,7 @@ hr{
 .more{
    font-size: 25px;
    transition: all .2s;
+   padding-inline: 5px;
    color: #510000;
    cursor: pointer;
 }
@@ -392,7 +402,7 @@ hr{
       display: none;
    }
    header{
-      position: sticky;
+      position: fixed;
       top: 0;
       z-index: 2;
    }
@@ -419,6 +429,7 @@ hr{
    .grid{
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
+      padding-inline: 40px;
    }
    .work{
       flex-direction: row;
