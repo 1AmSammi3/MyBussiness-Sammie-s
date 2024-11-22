@@ -256,7 +256,7 @@ a{
 .work{
    display: flex;
    border: solid 1px #270051;
-   width: 350px;
+   width: 300px;
    color: #270051;
    padding: 10px 20px 10px 20px;
    box-shadow: 0 15px 25px #4800653f;
