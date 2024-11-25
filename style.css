@@ -165,6 +165,11 @@ img{
       filter: opacity(100%);
    }
 }
+nav img{
+   width: 130px;
+   height: 30px;
+   filter: opacity(90%);
+}
 ul{
    padding-top: 70px;
 }
